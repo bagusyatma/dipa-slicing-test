@@ -44,7 +44,7 @@ export function useLayout() {
 export const ResponsiveHeader = ({ isExpandedHeader, setIsExpandedHeader }) => {
   return (
     isExpandedHeader && (
-      <div className={cn(['fixed inset-0 overflow-hidden bg-black/35', 'lg:hidden'])} onClick={() => setIsExpandedHeader(false)}>
+      <div className={cn(['fixed inset-0 z-10 overflow-hidden bg-black/35', 'lg:hidden'])} onClick={() => setIsExpandedHeader(false)}>
         <div
           className={cn([
             'fixed top-[calc(64px+32px)] right-0 h-fit w-full bg-white p-4 shadow-xs',

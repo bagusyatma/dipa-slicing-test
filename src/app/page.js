@@ -34,7 +34,7 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <div className={cn(['z-0'])}>
       {/* ========== Hero ========== */}
 
       {/* ========== Solution ========== */}
@@ -50,7 +50,9 @@ export default function Home() {
             </div>
 
             <div className={cn(['flex w-full flex-col gap-8 lg:flex-row'])}>
-              <div className={cn(['relative flex flex-col gap-10 bg-white px-8 py-10 md:flex-row lg:w-[465px] lg:flex-col lg:px-10 lg:py-12'])}>
+              <div
+                className={cn(['relative z-0 flex flex-col gap-10 bg-white px-8 py-10 md:flex-row lg:w-[465px] lg:flex-col lg:px-10 lg:py-12'])}
+              >
                 <div className={cn(['h-[307px] w-full bg-blue-500 md:h-[224px] md:w-64 lg:h-[307px] lg:w-full'])} />
                 <div className={cn(['flex flex-1 flex-col gap-8'])}>
                   <div className={cn(['flex flex-col gap-4'])}>
