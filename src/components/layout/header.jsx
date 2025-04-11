@@ -12,7 +12,7 @@ import React from 'react';
 export default function Header({ isExpanded, onExpanded }) {
   return (
     <React.Fragment>
-      <header className={cn(['relative z-50 bg-white'])}>
+      <header data-aos="fade" data-aos-delay="50" className={cn(['relative z-50 bg-white'])}>
         <Container>
           <div className={cn(['mx-auto flex max-w-7xl items-center justify-between py-4 lg:py-7'])}>
             <div className={cn(['flex items-center gap-16'])}>

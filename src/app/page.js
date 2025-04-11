@@ -1,15 +1,21 @@
 import BackgroundCTA from '@/assets/image/background-cta.png';
 import BackgroundLining from '@/assets/image/background-lining.jpg';
+import Blog1 from '@/assets/image/blog-1.jpg';
+import Blog2 from '@/assets/image/blog-2.jpg';
+import Blog3 from '@/assets/image/blog-3.jpg';
 import CardIntegration from '@/assets/image/card-integration.png';
 import IntegrationCardKYC from '@/assets/image/integration-card-kyc.png';
 import OrnamentCard from '@/assets/image/ornament-card.png';
 import Payment1 from '@/assets/image/payment-1.png';
 import Payment2 from '@/assets/image/payment-2.png';
 import Payment3 from '@/assets/image/payment-3.png';
+import Solution1 from '@/assets/image/solution-1.jpg';
+import Solution2 from '@/assets/image/solution-2.jpg';
 import TrustedCompany1 from '@/assets/image/trusted-company-1.png';
 import TrustedCompany2 from '@/assets/image/trusted-company-2.png';
 import TrustedCompany3 from '@/assets/image/trusted-company-3.png';
 import TrustedCompany4 from '@/assets/image/trusted-company-4.png';
+import WhyUs from '@/assets/image/why-us.jpg';
 import Container from '@/components/layout/container';
 import Button from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -19,18 +25,21 @@ import Image from 'next/image';
 export default function Home() {
   const blogs = [
     {
+      imageUrl: Blog1,
       category: 'Product',
       readTime: '3 min read',
       title: 'How to reach the top of the digital wallet',
       date: 'December 07, 2022',
     },
     {
+      imageUrl: Blog2,
       category: 'Company',
       readTime: '5 min read',
       title: 'How Nivelle works with multiple banks',
       date: 'December 06, 2022',
     },
     {
+      imageUrl: Blog3,
       category: 'Company',
       readTime: '4 min read',
       title: 'Building fintech is still too hard: Introducing Nivelle',
@@ -143,7 +152,9 @@ export default function Home() {
                 data-aos-delay="300"
                 className={cn(['relative z-0 flex flex-col gap-10 bg-white px-8 py-10 md:flex-row lg:w-[465px] lg:flex-col lg:px-10 lg:py-12'])}
               >
-                <div className={cn(['h-[307px] w-full bg-blue-500 md:h-[224px] md:w-64 lg:h-[307px] lg:w-full'])} />
+                <div className={cn(['h-[307px] w-full bg-white md:h-[224px] md:w-64 lg:h-[307px] lg:w-full'])}>
+                  <Image src={Solution1} alt="Solution 1" />
+                </div>
                 <div className={cn(['flex flex-1 flex-col gap-8'])}>
                   <div className={cn(['flex flex-col gap-4'])}>
                     <h1 className={cn(['cursor-pointer text-2xl leading-[130%] font-bold lg:text-3xl'])}>Digital Banking & Cards</h1>
@@ -180,7 +191,9 @@ export default function Home() {
                       <ArrowRight className={cn(['size-4'])} />
                     </Button>
                   </div>
-                  <div className={cn(['h-[307px] w-full bg-blue-500 md:h-[224px] md:w-64'])} />
+                  <div className={cn(['h-[307px] w-full bg-white md:h-[224px] md:w-64'])}>
+                    <Image src={Solution2} alt="Solution 2" />
+                  </div>
                 </div>
 
                 <div className={cn(['flex h-1/2 w-full flex-col gap-8 md:flex-row'])}>
@@ -200,7 +213,7 @@ export default function Home() {
                         data-aos="zoom-in"
                         data-aos-delay="650"
                       >
-                        <Image src={Payment1} alt="Payment 1" />
+                        <Image src={Payment1} alt="Payment 1" className={cn(['h-8 w-8'])} />
                         <div className={cn(['flex flex-col items-center gap-1'])}>
                           <span className="text-sm font-medium">ACH</span>
                           <span className="text-[8px] text-[#6C6F93]">Business Day</span>
@@ -211,7 +224,7 @@ export default function Home() {
                         data-aos="zoom-in"
                         data-aos-delay="700"
                       >
-                        <Image src={Payment2} alt="Payment 2" />
+                        <Image src={Payment2} alt="Payment 2" className={cn(['h-8 w-8'])} />
                         <div className={cn(['flex flex-col items-center gap-1'])}>
                           <span className="text-sm font-medium">Wire</span>
                           <span className="text-[8px] text-[#6C6F93]">Business Day</span>
@@ -222,7 +235,7 @@ export default function Home() {
                         data-aos="zoom-in"
                         data-aos-delay="750"
                       >
-                        <Image src={Payment3} alt="Payment 3" />
+                        <Image src={Payment3} alt="Payment 3" className={cn(['h-8 w-8'])} />
                         <div className={cn(['flex flex-col items-center gap-1'])}>
                           <span className="text-sm font-medium">Swift</span>
                           <span className="text-[8px] text-[#6C6F93]">Business Day</span>
@@ -337,8 +350,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={cn(['hidden flex-1 bg-red-500 lg:block'])} data-aos="fade-left" data-aos-delay="300">
-            a
+          <div className={cn(['hidden flex-1 lg:block'])} data-aos="fade-left" data-aos-delay="300">
+            <Image src={WhyUs} alt="Why Us" />
           </div>
         </div>
       </div>
@@ -347,16 +360,26 @@ export default function Home() {
       <Container>
         <div className={cn(['flex flex-col items-center gap-14 py-24'])}>
           <div className={cn(['flex max-w-xl flex-col items-center gap-5'])}>
-            <div className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}>Bank Partners</div>
-            <h1 className={cn(['text-center text-3xl leading-[130%] font-bold tracking-[0.2px] sm:text-4xl md:text-5xl'])}>
+            <div
+              className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}
+              data-aos="fade-down"
+              data-aos-delay="0"
+            >
+              Bank Partners
+            </div>
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className={cn(['text-center text-3xl leading-[130%] font-bold tracking-[0.2px] sm:text-4xl md:text-5xl'])}
+            >
               Fully Integrated with Multiple Banks
             </h1>
-            <p className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-28'])}>
+            <p data-aos="fade-up" data-aos-delay="200" className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-28'])}>
               We work closely with all bank partners to ensure compliance, oversight, and security.
             </p>
           </div>
 
-          <Image src={CardIntegration} alt="Card Integration" />
+          <Image data-aos="zoom-in" data-aos-delay="300" src={CardIntegration} alt="Card Integration" />
         </div>
       </Container>
 
@@ -365,16 +388,30 @@ export default function Home() {
         <Container>
           <div className={cn(['flex flex-col items-center gap-14 py-20'])}>
             <div className={cn(['flex max-w-2xl flex-col items-center gap-5'])}>
-              <div className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}>Resources</div>
-              <h1 className={cn(['text-3xl leading-[130%] font-bold tracking-[0.2px] sm:text-4xl md:text-5xl'])}>Explore Our Resources</h1>
-              <p className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-32'])}>
+              <div
+                className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}
+                data-aos="fade-down"
+                data-aos-delay="0"
+              >
+                Resources
+              </div>
+              <h1
+                className={cn(['text-3xl leading-[130%] font-bold tracking-[0.2px] sm:text-4xl md:text-5xl'])}
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Explore Our Resources
+              </h1>
+              <p className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-32'])} data-aos="fade-up" data-aos-delay="200">
                 Navigate articles, whitepapers and thought leadership pieces to learn more about Nivelle.
               </p>
             </div>
 
             <div className={cn(['grid w-full grid-cols-1 gap-8 lg:grid-cols-3'])}>
-              {blogs.map(blog => (
-                <BlogCard key={blog.title} {...blog} />
+              {blogs.map((blog, index) => (
+                <div key={blog.title} data-aos="zoom-in" data-aos-delay={300 + index * 50}>
+                  <BlogCard {...blog} />
+                </div>
               ))}
             </div>
           </div>
@@ -384,13 +421,27 @@ export default function Home() {
       {/* ========== Click to Action ========== */}
       <Container>
         <div
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="600"
           className={cn(['my-20 flex flex-col items-center gap-y-14 bg-cover bg-center py-[101px]'])}
           style={{ backgroundImage: `url(${BackgroundCTA.src})` }}
         >
-          <h1 className={cn(['max-w-2xl text-center text-4xl font-bold text-white md:text-5xl lg:text-[56px]'])}>
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="600"
+            className={cn(['max-w-2xl text-center text-4xl font-bold text-white md:text-5xl lg:text-[56px]'])}
+          >
             Start Building Your Own Banking Service
           </h1>
-          <Button variant="white" className={cn(['mx-auto flex items-center gap-3'])}>
+          <Button
+            data-aos="zoom-in"
+            data-aos-delay="800"
+            data-aos-duration="600"
+            variant="white"
+            className={cn(['mx-auto flex items-center gap-3'])}
+          >
             Open an Account
             <ArrowRight className={cn(['size-4'])} />
           </Button>
@@ -403,7 +454,9 @@ export default function Home() {
 const BlogCard = ({ category, readTime, title, date, imageUrl }) => {
   return (
     <div className={cn(['flex flex-col gap-6 bg-white p-6'])}>
-      <div className={cn(['h-[180px] w-full bg-blue-500'])} style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover' }} />
+      <div className={cn(['h-[180px] w-full'])}>
+        <Image src={imageUrl} alt={title} />
+      </div>
       <div className={cn(['flex flex-col gap-4'])}>
         <div className={cn(['flex flex-col gap-3'])}>
           <div className={cn(['flex items-center gap-4'])}>

@@ -6,7 +6,7 @@ import React from 'react';
 
 export default function Banner({ isClosed, onClosed }) {
   return isClosed ? null : (
-    <div className={cn(['relative z-50 w-full bg-[#0E0B3D] py-2 text-xs text-white'])}>
+    <div data-aos="fade-down" data-aos-delay="0" className={cn(['relative z-50 w-full bg-[#0E0B3D] py-2 text-xs text-white'])}>
       <div className={cn(['flex items-center justify-center gap-2.5'])}>
         <Image src={LogoWithoutCircle} alt="logo" className={cn(['size-4'])} />
         <React.Fragment>
