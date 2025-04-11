@@ -4,6 +4,7 @@ import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import Banner from '@/components/ui/banner';
 import Button from '@/components/ui/button';
+import AOS from 'aos';
 import React from 'react';
 import { menus } from '../constant/menus';
 import { cn } from '../utils';
@@ -13,6 +14,10 @@ const LayoutContext = React.createContext();
 export default function LayoutProvider({ children }) {
   const [isClosedBanner, setIsClosedBanner] = React.useState(false);
   const [isExpandedHeader, setIsExpandedHeader] = React.useState(false);
+
+  React.useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
 
   React.useEffect(() => {
     isExpandedHeader ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'unset');

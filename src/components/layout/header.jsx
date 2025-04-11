@@ -5,7 +5,7 @@ import Container from '@/components/layout/container';
 import Button from '@/components/ui/button';
 import { menus } from '@/lib/constant/menus';
 import { cn } from '@/lib/utils';
-import { MenuIcon } from 'lucide-react';
+import { MenuIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -37,7 +37,7 @@ export default function Header({ isExpanded, onExpanded }) {
 
             <div className={cn(['flex items-center lg:hidden'])}>
               <Button variant="ghost" onClick={onExpanded} size="sn">
-                <MenuIcon className={cn(['size-6'])} />
+                {isExpanded ? <XIcon className={cn(['size-6'])} /> : <MenuIcon className={cn(['size-6'])} />}
               </Button>
             </div>
           </div>

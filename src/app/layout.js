@@ -1,6 +1,7 @@
-import { manrope } from '@/assets/font';
+import { roobert } from '@/assets/font';
 import LayoutProvider from '@/lib/providers/LayoutProvider';
 import '@/styles/globals.css';
+import 'aos/dist/aos.css';
 
 export const metadata = {
   title: 'Nivelle',
@@ -10,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} antialiased`}>
+      <body className={`${roobert.className} font-roobert antialiased`}>
         <LayoutProvider>{children}</LayoutProvider>
       </body>
     </html>
