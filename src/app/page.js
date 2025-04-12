@@ -4,6 +4,11 @@ import Blog1 from '@/assets/image/blog-1.jpg';
 import Blog2 from '@/assets/image/blog-2.jpg';
 import Blog3 from '@/assets/image/blog-3.jpg';
 import CardIntegration from '@/assets/image/card-integration.png';
+import HeroOrnament1 from '@/assets/image/hero-ornament-1.png';
+import HeroOrnament2 from '@/assets/image/hero-ornament-2.png';
+import HeroOrnament3 from '@/assets/image/hero-ornament-3.png';
+import HeroOrnament4 from '@/assets/image/hero-ornament-4.png';
+import HeroOrnamentBackground from '@/assets/image/hero-ornament-background.png';
 import IntegrationCardKYC from '@/assets/image/integration-card-kyc.png';
 import OrnamentCard from '@/assets/image/ornament-card.png';
 import Payment1 from '@/assets/image/payment-1.png';
@@ -120,8 +125,26 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={cn(['hidden flex-1 bg-red-300 lg:block'])} data-aos="fade-left" data-aos-delay="300">
-            B
+          <div className={cn(['relative hidden flex-1 lg:block'])} data-aos="fade-left" data-aos-delay="300">
+            <div className={cn(['absolute right-0 h-full w-60'])} data-aos="fade-right" data-aos-delay="400">
+              <Image src={HeroOrnamentBackground} alt="Hero Ornament Background" className={cn(['h-full w-full object-cover'])} />
+            </div>
+
+            <div className={cn(['absolute top-48 right-64 h-1/5 xl:top-36 xl:right-72 xl:h-1/3'])} data-aos="fade-up" data-aos-delay="500">
+              <Image src={HeroOrnament1} alt="Hero Ornament 1" className={cn(['h-full w-full object-cover'])} />
+            </div>
+
+            <div className={cn(['absolute top-16 -right-8 h-1/2 xl:top-8 xl:h-2/3'])} data-aos="fade-down" data-aos-delay="600">
+              <Image src={HeroOrnament2} alt="Hero Ornament 2" className={cn(['h-full w-full object-cover'])} />
+            </div>
+
+            <div className={cn(['absolute top-72 right-16 h-1/2 xl:h-2/3'])} data-aos="fade-left" data-aos-delay="700">
+              <Image src={HeroOrnament3} alt="Hero Ornament 3" className={cn(['h-full w-full object-cover'])} />
+            </div>
+
+            <div className={cn(['absolute right-8 bottom-4 h-1/3 xl:right-16'])} data-aos="fade-up" data-aos-delay="800">
+              <Image src={HeroOrnament4} alt="Hero Ornament 4" className={cn(['h-full w-full object-cover'])} />
+            </div>
           </div>
         </div>
       </Container>
