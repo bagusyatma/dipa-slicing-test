@@ -10,13 +10,13 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-12 lg:flex-row">
           <div className={cn(['flex cursor-pointer items-center gap-4'])}>
             <Image src={LogoWithCircle} alt="logo" className={cn(['size-7'])} />
-            <h1 className={cn(['text-2xl font-bold'])}>Nivelle</h1>
+            <h1 className={cn(['text-primary-text text-2xl font-bold'])}>Nivelle</h1>
           </div>
 
           <div className={cn(['grid w-full grid-cols-2 gap-12 lg:w-auto lg:grid-cols-4'])}>
             <div className={cn(['flex h-full w-full flex-col gap-6'])}>
-              <h1 className={cn(['text-lg font-semibold'])}>Products</h1>
-              <div className={cn(['flex flex-col gap-5 text-[#6C6F93]'])}>
+              <h1 className={cn(['text-primary-text text-lg font-semibold'])}>Products</h1>
+              <div className={cn(['text-secondary-text flex flex-col gap-5'])}>
                 <span className={cn(['cursor-pointer'])}>Business Banking</span>
                 <span className={cn(['cursor-pointer'])}>Consumer Banking</span>
                 <span className={cn(['cursor-pointer'])}>Digital Freelance</span>
@@ -24,8 +24,8 @@ export default function Footer() {
               </div>
             </div>
             <div className={cn(['flex h-full w-full flex-col gap-6'])}>
-              <h1 className={cn(['text-lg font-semibold'])}>Resources</h1>
-              <div className={cn(['flex flex-col gap-5 text-[#6C6F93]'])}>
+              <h1 className={cn(['text-primary-text text-lg font-semibold'])}>Resources</h1>
+              <div className={cn(['text-secondary-text flex flex-col gap-5'])}>
                 <span className={cn(['cursor-pointer'])}>Guides</span>
                 <span className={cn(['cursor-pointer'])}>Blog</span>
                 <span className={cn(['cursor-pointer'])}>Roadmap</span>
@@ -34,8 +34,8 @@ export default function Footer() {
               </div>
             </div>
             <div className={cn(['flex h-full w-full flex-col gap-6'])}>
-              <h1 className={cn(['text-lg font-semibold'])}>Company</h1>
-              <div className={cn(['flex flex-col gap-5 text-[#6C6F93]'])}>
+              <h1 className={cn(['text-primary-text text-lg font-semibold'])}>Company</h1>
+              <div className={cn(['text-secondary-text flex flex-col gap-5'])}>
                 <span className={cn(['cursor-pointer'])}>About Us</span>
                 <div className="flex items-center gap-2">
                   <span className={cn(['cursor-pointer'])}>Careers</span>
@@ -46,8 +46,8 @@ export default function Footer() {
               </div>
             </div>
             <div className={cn(['flex h-full w-full flex-col gap-6'])}>
-              <h1 className={cn(['text-lg font-semibold'])}>Support</h1>
-              <div className={cn(['flex flex-col gap-5 text-[#6C6F93]'])}>
+              <h1 className={cn(['text-primary-text text-lg font-semibold'])}>Support</h1>
+              <div className={cn(['text-secondary-text flex flex-col gap-5'])}>
                 <span className={cn(['cursor-pointer'])}>Get Help</span>
                 <span className={cn(['cursor-pointer'])}>FAQ</span>
               </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="mx-auto mt-28 flex max-w-7xl items-center justify-between">
-          <span className="text-sm text-[#6C6F93]">© 2022, Nivelle Technologies. Inc</span>
+          <span className="text-secondary-text text-sm">© 2022, Nivelle Technologies. Inc</span>
           <div className="flex items-center gap-2 md:gap-4 lg:gap-6">
             <div>
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

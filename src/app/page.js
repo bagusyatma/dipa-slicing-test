@@ -25,6 +25,7 @@ import TrustedCompany4 from '@/assets/image/trusted-company-4.png';
 import WhyUs from '@/assets/image/why-us.jpg';
 import Container from '@/components/layout/container';
 import Button from '@/components/ui/button';
+import SectionHeader from '@/components/ui/section-header';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -87,13 +88,13 @@ export default function Home() {
                   fill="#9CA3AF"
                 />
               </svg>
-              <p className={cn(['text-sm leading-[100%] tracking-[0.2px] text-[#9CA3AF]'])}>Banking-as-a-service platform</p>
+              <p className={cn(['text-tertiary-text text-sm leading-[100%] tracking-[0.2px]'])}>Banking-as-a-service platform</p>
             </div>
 
             <div className={cn(['relative mt-4'])} data-aos="fade-up" data-aos-delay="100">
               <h1
                 className={cn([
-                  'relative z-10 text-center text-4xl leading-[130%] font-semibold tracking-[-0.5px] sm:text-5xl md:text-6xl lg:text-left lg:text-7xl',
+                  'text-primary-text relative z-10 text-center text-4xl leading-[130%] font-semibold tracking-[-0.5px] sm:text-5xl md:text-6xl lg:text-left lg:text-7xl',
                 ])}
               >
                 Built Payment for <br /> Digital Freelancers
@@ -108,7 +109,7 @@ export default function Home() {
             </div>
 
             <div className={cn(['mt-6 max-w-xl'])} data-aos="fade-up" data-aos-delay="300">
-              <p className={cn(['text-center text-lg leading-[170%] tracking-[0.4px] text-[#9CA3AF] lg:text-left'])}>
+              <p className={cn(['text-tertiary-text text-center text-lg leading-[170%] tracking-[0.4px] lg:text-left'])}>
                 Nivelle is a banking-as-a-service platform that has everything you need to grow your business. Thousands of entrepreneurs rely
                 on us to build in minutes, launch in one week.
               </p>
@@ -122,7 +123,7 @@ export default function Home() {
             </div>
 
             <div className={cn(['mt-16 flex flex-col gap-6'])} data-aos="fade-up" data-aos-delay="500">
-              <span className={cn(['text-center leading-[100%] tracking-[0.2px] text-[#9CA3AF] lg:text-left'])}>
+              <span className={cn(['text-tertiary-text text-center leading-[100%] tracking-[0.2px] lg:text-left'])}>
                 More than 200+ companies trusted us worldwide
               </span>
               <div className={cn(['grid grid-cols-2 items-center justify-between gap-8 sm:grid-cols-4 lg:w-[563px]'])}>
@@ -169,21 +170,11 @@ export default function Home() {
       <div className={cn(['bg-[#F7F9FC]'])}>
         <Container>
           <div className={cn(['flex flex-col items-center gap-12 py-20'])}>
-            <div className={cn(['flex max-w-2xl flex-col items-center gap-5'])}>
-              <div
-                className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}
-                data-aos="fade-down"
-                data-aos-delay="0"
-              >
-                Our Solution
-              </div>
-              <h1 className={cn(['text-center text-3xl font-bold sm:text-4xl md:text-5xl'])} data-aos="fade-up" data-aos-delay="100">
-                Our Solutions For Your Embedded Finance Needs
-              </h1>
-              <p className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-12 lg:px-24'])} data-aos="fade-up" data-aos-delay="200">
-                Empower your users by building cards, accounts, payments, and lending products — as easy as plug-and-play.
-              </p>
-            </div>
+            <SectionHeader
+              category="Our Solution"
+              title="Our Solutions For Your Embedded Finance Needs"
+              description="Empower your users by building cards, accounts, payments, and lending products — as easy as plug-and-play."
+            />
 
             <div className={cn(['flex w-full flex-col gap-8 lg:flex-row'])}>
               <div
@@ -196,8 +187,10 @@ export default function Home() {
                 </div>
                 <div className={cn(['flex flex-1 flex-col gap-8'])}>
                   <div className={cn(['flex flex-col gap-4'])}>
-                    <h1 className={cn(['cursor-pointer text-2xl leading-[130%] font-bold lg:text-3xl'])}>Digital Banking & Cards</h1>
-                    <p className={cn(['text-sm leading-[170%] tracking-[0.4px] text-[#6C6F93] lg:text-base'])}>
+                    <h1 className={cn(['text-primary-text cursor-pointer text-2xl leading-[130%] font-bold lg:text-3xl'])}>
+                      Digital Banking & Cards
+                    </h1>
+                    <p className={cn(['text-secondary-text text-sm leading-[170%] tracking-[0.4px] lg:text-base'])}>
                       Fully programmable, high-interchange debit cards for individuals and businesses.
                     </p>
                   </div>
@@ -217,10 +210,12 @@ export default function Home() {
                   <Image src={OrnamentCard} alt="Ornament Card" className={cn(['absolute bottom-0 left-10 hidden lg:block'])} />
                   <div className={cn(['flex flex-1 flex-col gap-6'])}>
                     <div className={cn(['flex flex-col gap-3'])}>
-                      <h1 className={cn(['cursor-pointer text-2xl leading-[130%] font-bold'])}>Lending</h1>
+                      <h1 className={cn(['text-primary-text cursor-pointer text-2xl leading-[130%] font-bold'])}>Lending</h1>
                       <p
                         title="Offer consumer and SME loans to your customers in your own branding."
-                        className={cn(['line-clamp-2 overflow-hidden text-sm leading-[170%] tracking-[0.4px] text-ellipsis text-[#6C6F93]'])}
+                        className={cn([
+                          'text-secondary-text line-clamp-2 overflow-hidden text-sm leading-[170%] tracking-[0.4px] text-ellipsis',
+                        ])}
                       >
                         Offer consumer and SME loans to your customers in your own branding.
                       </p>
@@ -242,8 +237,10 @@ export default function Home() {
                     data-aos-delay="600"
                   >
                     <div className={cn(['flex flex-col gap-3'])}>
-                      <h1 className={cn(['cursor-pointer text-2xl leading-[130%] font-bold'])}>Payments</h1>
-                      <p className={cn(['text-sm leading-[170%] tracking-[0.4px] text-[#6C6F93]'])}>Send and receive ACH, checks, and more.</p>
+                      <h1 className={cn(['text-primary-text cursor-pointer text-2xl leading-[130%] font-bold'])}>Payments</h1>
+                      <p className={cn(['text-secondary-text text-sm leading-[170%] tracking-[0.4px]'])}>
+                        Send and receive ACH, checks, and more.
+                      </p>
                     </div>
 
                     <div className={cn(['grid grid-cols-3 justify-between gap-3'])}>
@@ -254,8 +251,8 @@ export default function Home() {
                       >
                         <Image src={Payment1} alt="Payment 1" className={cn(['h-8 w-8'])} />
                         <div className={cn(['flex flex-col items-center gap-1'])}>
-                          <span className="text-sm font-medium">ACH</span>
-                          <span className="text-[8px] text-[#6C6F93]">Business Day</span>
+                          <span className="text-primary-text text-sm font-medium">ACH</span>
+                          <span className="text-secondary-text text-[8px]">Business Day</span>
                         </div>
                       </div>
                       <div
@@ -265,8 +262,8 @@ export default function Home() {
                       >
                         <Image src={Payment2} alt="Payment 2" className={cn(['h-8 w-8'])} />
                         <div className={cn(['flex flex-col items-center gap-1'])}>
-                          <span className="text-sm font-medium">Wire</span>
-                          <span className="text-[8px] text-[#6C6F93]">Business Day</span>
+                          <span className="text-primary-text text-sm font-medium">Wire</span>
+                          <span className="text-secondary-text text-[8px]">Business Day</span>
                         </div>
                       </div>
                       <div
@@ -276,8 +273,8 @@ export default function Home() {
                       >
                         <Image src={Payment3} alt="Payment 3" className={cn(['h-8 w-8'])} />
                         <div className={cn(['flex flex-col items-center gap-1'])}>
-                          <span className="text-sm font-medium">Swift</span>
-                          <span className="text-[8px] text-[#6C6F93]">Business Day</span>
+                          <span className="text-primary-text text-sm font-medium">Swift</span>
+                          <span className="text-secondary-text text-[8px]">Business Day</span>
                         </div>
                       </div>
                     </div>
@@ -288,10 +285,12 @@ export default function Home() {
                     data-aos-delay="800"
                   >
                     <div className={cn(['flex flex-col gap-3'])}>
-                      <h1 className={cn(['cursor-pointer text-2xl leading-[130%] font-bold'])}>KYC Platform</h1>
+                      <h1 className={cn(['text-primary-text cursor-pointer text-2xl leading-[130%] font-bold'])}>KYC Platform</h1>
                       <p
                         title="Pellentesque quis id nec tortor velit ullamcorper elementum."
-                        className={cn(['line-clamp-2 overflow-hidden text-sm leading-[170%] tracking-[0.4px] text-ellipsis text-[#6C6F93]'])}
+                        className={cn([
+                          'text-secondary-text line-clamp-2 overflow-hidden text-sm leading-[170%] tracking-[0.4px] text-ellipsis',
+                        ])}
                       >
                         Pellentesque quis id nec tortor velit ullamcorper elementum.
                       </p>
@@ -322,7 +321,7 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="100"
                 className={cn([
-                  'px-8 text-center text-3xl leading-[130%] font-bold tracking-[0.2px] sm:px-0 sm:text-4xl md:text-left md:text-5xl',
+                  'text-primary-text px-8 text-center text-3xl leading-[130%] font-bold tracking-[0.2px] sm:px-0 sm:text-4xl md:text-left md:text-5xl',
                 ])}
               >
                 Why Should You Work with Us
@@ -345,8 +344,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className={cn(['flex flex-1 flex-col gap-2'])}>
-                  <h1 className={cn(['text-lg leading-[130%] font-bold tracking-[0.2px]'])}>Speed and Flexibility</h1>
-                  <p className={cn(['text-sm leading-[170%] tracking-[0.4px] text-[#6C6F93]'])}>
+                  <h1 className={cn(['text-primary-text text-lg leading-[130%] font-bold tracking-[0.2px]'])}>Speed and Flexibility</h1>
+                  <p className={cn(['text-secondary-text text-sm leading-[170%] tracking-[0.4px]'])}>
                     Offer unique features and terms that work for your users. Customize the experience with Nivelle flexible API.
                   </p>
                 </div>
@@ -363,8 +362,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className={cn(['flex flex-1 flex-col gap-2'])}>
-                  <h1 className={cn(['text-lg leading-[130%] font-bold tracking-[0.2px]'])}>Increased Customer Loyalty</h1>
-                  <p className={cn(['text-sm leading-[170%] tracking-[0.4px] text-[#6C6F93]'])}>
+                  <h1 className={cn(['text-primary-text text-lg leading-[130%] font-bold tracking-[0.2px]'])}>Increased Customer Loyalty</h1>
+                  <p className={cn(['text-secondary-text text-sm leading-[170%] tracking-[0.4px]'])}>
                     Integrate financial services into your product landscape and increase customer loyalty with this service.
                   </p>
                 </div>
@@ -381,8 +380,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className={cn(['flex flex-1 flex-col gap-2'])}>
-                  <h1 className={cn(['text-lg leading-[130%] font-bold tracking-[0.2px]'])}>Fully Licensed Bank</h1>
-                  <p className={cn(['text-sm leading-[170%] tracking-[0.4px] text-[#6C6F93]'])}>
+                  <h1 className={cn(['text-primary-text text-lg leading-[130%] font-bold tracking-[0.2px]'])}>Fully Licensed Bank</h1>
+                  <p className={cn(['text-secondary-text text-sm leading-[170%] tracking-[0.4px]'])}>
                     We always handle all the complexities, so you can focus on creating the best products for your customers.
                   </p>
                 </div>
@@ -398,25 +397,11 @@ export default function Home() {
       {/* ========== Integration ========== */}
       <Container>
         <div className={cn(['flex flex-col items-center gap-14 py-24'])}>
-          <div className={cn(['flex max-w-xl flex-col items-center gap-5'])}>
-            <div
-              className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}
-              data-aos="fade-down"
-              data-aos-delay="0"
-            >
-              Bank Partners
-            </div>
-            <h1
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className={cn(['text-center text-3xl leading-[130%] font-bold tracking-[0.2px] sm:text-4xl md:text-5xl'])}
-            >
-              Fully Integrated with Multiple Banks
-            </h1>
-            <p data-aos="fade-up" data-aos-delay="200" className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-28'])}>
-              We work closely with all bank partners to ensure compliance, oversight, and security.
-            </p>
-          </div>
+          <SectionHeader
+            category="Bank Partners"
+            title="Fully Integrated with Multiple Banks"
+            description="We work closely with all bank partners to ensure compliance, oversight, and security."
+          />
 
           <Image data-aos="zoom-in" data-aos-delay="300" src={CardIntegration} alt="Card Integration" />
         </div>
@@ -426,25 +411,11 @@ export default function Home() {
       <div className={cn(['bg-[#F7F9FC]'])}>
         <Container>
           <div className={cn(['flex flex-col items-center gap-14 py-20'])}>
-            <div className={cn(['flex max-w-2xl flex-col items-center gap-5'])}>
-              <div
-                className={cn(['border border-[#00B3FF] px-3 py-2 text-xs font-semibold text-[#00B3FF]'])}
-                data-aos="fade-down"
-                data-aos-delay="0"
-              >
-                Resources
-              </div>
-              <h1
-                className={cn(['text-3xl leading-[130%] font-bold tracking-[0.2px] sm:text-4xl md:text-5xl'])}
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                Explore Our Resources
-              </h1>
-              <p className={cn(['px-4 text-center text-[#6C6F93] sm:px-8 md:px-32'])} data-aos="fade-up" data-aos-delay="200">
-                Navigate articles, whitepapers and thought leadership pieces to learn more about Nivelle.
-              </p>
-            </div>
+            <SectionHeader
+              category="Resources"
+              title="Explore Our Resources"
+              description="Navigate articles, whitepapers and thought leadership pieces to learn more about Nivelle."
+            />
 
             <div className={cn(['grid w-full grid-cols-1 gap-8 lg:grid-cols-3'])}>
               {blogs.map((blog, index) => (
@@ -500,11 +471,11 @@ const BlogCard = ({ category, readTime, title, date, imageUrl }) => {
         <div className={cn(['flex flex-col gap-3'])}>
           <div className={cn(['flex items-center gap-4'])}>
             <div className={cn(['border border-[#1463FF] px-2.5 py-1 text-[11px] font-semibold text-[#1463FF]'])}>{category}</div>
-            <span className={cn(['text-xs leading-[100%] font-normal tracking-[0.2px] text-[#6C6F93]'])}>{readTime}</span>
+            <span className={cn(['text-secondary-text text-xs leading-[100%] font-normal tracking-[0.2px]'])}>{readTime}</span>
           </div>
-          <h1 className={cn(['cursor-pointer text-2xl leading-[140%] font-bold tracking-[0.4px]'])}>{title}</h1>
+          <h1 className={cn(['text-primary-text cursor-pointer text-2xl leading-[140%] font-bold tracking-[0.4px]'])}>{title}</h1>
         </div>
-        <p className={cn(['text-sm leading-[100%] font-normal tracking-[0.2px] text-[#6C6F93]'])}>{date}</p>
+        <p className={cn(['text-secondary-text text-sm leading-[100%] font-normal tracking-[0.2px]'])}>{date}</p>
       </div>
     </div>
   );

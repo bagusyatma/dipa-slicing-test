@@ -4,7 +4,7 @@ import '@/styles/globals.css';
 import 'aos/dist/aos.css';
 
 export const metadata = {
-  title: 'Nivelle - Banking-as-a-service platform',
+  title: 'Nivelle',
   description: 'Nivelle is a banking-as-a-service platform that has everything you need to grow your business.',
 };
 

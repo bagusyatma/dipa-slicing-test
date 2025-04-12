@@ -18,12 +18,12 @@ export default function Header({ isExpanded, onExpanded }) {
             <div className={cn(['flex items-center gap-16'])}>
               <div className={cn(['flex cursor-pointer items-center gap-4'])}>
                 <Image src={LogoWithCircle} alt="logo" className={cn(['size-7'])} />
-                <h1 className={cn(['text-2xl font-bold'])}>Nivelle</h1>
+                <h1 className={cn(['text-primary-text text-2xl font-bold'])}>Nivelle</h1>
               </div>
 
               <div className={cn(['hidden items-center gap-10 lg:flex'])}>
                 {menus.map((menu, index) => (
-                  <button key={index} className={cn(['cursor-pointer focus:outline-none'])}>
+                  <button key={index} className={cn(['text-primary-text cursor-pointer focus:outline-none'])}>
                     {menu.label}
                   </button>
                 ))}
