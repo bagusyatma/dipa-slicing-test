@@ -4,8 +4,8 @@ import '@/styles/globals.css';
 import 'aos/dist/aos.css';
 
 export const metadata = {
-  title: 'Nivelle',
-  description: 'Built Payment for Digital Freelancers',
+  title: 'Nivelle - Banking-as-a-service platform',
+  description: 'Nivelle is a banking-as-a-service platform that has everything you need to grow your business.',
 };
 
 export default function RootLayout({ children }) {

@@ -1,3 +1,5 @@
+'use client';
+
 import BackgroundCTA from '@/assets/image/background-cta.png';
 import BackgroundLining from '@/assets/image/background-lining.jpg';
 import Blog1 from '@/assets/image/blog-1.jpg';
@@ -26,8 +28,22 @@ import Button from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    const initAOS = async () => {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    };
+
+    initAOS();
+  }, []);
+
   const blogs = [
     {
       imageUrl: Blog1,
@@ -111,16 +127,16 @@ export default function Home() {
               </span>
               <div className={cn(['grid grid-cols-2 items-center justify-between gap-8 sm:grid-cols-4 lg:w-[563px]'])}>
                 <div className={cn(['flex items-center justify-center'])} data-aos="zoom-in" data-aos-delay="600">
-                  <Image src={TrustedCompany1} alt="Trusted Company 1" />
+                  <Image src={TrustedCompany1} alt="Trusted Company 1" loading="lazy" width={100} height={50} />
                 </div>
                 <div className={cn(['flex items-center justify-center'])} data-aos="zoom-in" data-aos-delay="700">
-                  <Image src={TrustedCompany2} alt="Trusted Company 2" />
+                  <Image src={TrustedCompany2} alt="Trusted Company 2" loading="lazy" width={100} height={50} />
                 </div>
                 <div className={cn(['flex items-center justify-center'])} data-aos="zoom-in" data-aos-delay="800">
-                  <Image src={TrustedCompany3} alt="Trusted Company 3" />
+                  <Image src={TrustedCompany3} alt="Trusted Company 3" loading="lazy" width={100} height={50} />
                 </div>
                 <div className={cn(['flex items-center justify-center'])} data-aos="zoom-in" data-aos-delay="900">
-                  <Image src={TrustedCompany4} alt="Trusted Company 4" />
+                  <Image src={TrustedCompany4} alt="Trusted Company 4" loading="lazy" width={100} height={50} />
                 </div>
               </div>
             </div>
@@ -176,7 +192,7 @@ export default function Home() {
                 className={cn(['relative z-0 flex flex-col gap-10 bg-white px-8 py-10 md:flex-row lg:w-[465px] lg:flex-col lg:px-10 lg:py-12'])}
               >
                 <div className={cn(['h-[307px] w-full bg-white md:h-[224px] md:w-64 lg:h-[307px] lg:w-full'])}>
-                  <Image src={Solution1} alt="Solution 1" />
+                  <Image src={Solution1} alt="Solution 1" loading="lazy" width={400} height={180} className="object-cover" />
                 </div>
                 <div className={cn(['flex flex-1 flex-col gap-8'])}>
                   <div className={cn(['flex flex-col gap-4'])}>
@@ -215,7 +231,7 @@ export default function Home() {
                     </Button>
                   </div>
                   <div className={cn(['h-[307px] w-full bg-white md:h-[224px] md:w-64'])}>
-                    <Image src={Solution2} alt="Solution 2" />
+                    <Image src={Solution2} alt="Solution 2" loading="lazy" width={400} height={180} className="object-cover" />
                   </div>
                 </div>
 
@@ -478,7 +494,7 @@ const BlogCard = ({ category, readTime, title, date, imageUrl }) => {
   return (
     <div className={cn(['flex flex-col gap-6 bg-white p-6'])}>
       <div className={cn(['h-[180px] w-full'])}>
-        <Image src={imageUrl} alt={title} />
+        <Image src={imageUrl} alt={title} loading="lazy" width={400} height={180} className="object-cover" />
       </div>
       <div className={cn(['flex flex-col gap-4'])}>
         <div className={cn(['flex flex-col gap-3'])}>
